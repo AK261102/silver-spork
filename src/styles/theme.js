@@ -1,4 +1,3 @@
-// src/styles/theme.js
 export const theme = {
   colors: {
     darkNavy: '#0a192f',
