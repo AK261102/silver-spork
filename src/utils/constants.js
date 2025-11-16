@@ -120,7 +120,7 @@ export const personalProjects = [
     title: "Pinvent - Inventory Management System",
     description: "Comprehensive inventory management system for SMBs with CRUD operations, stock tracking, report generation, user profiles, pagination, and Redux state management.",
     tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "SCSS", "Multer"],
-    github: "https://github.com/AK261102/pinvent", // Update with actual GitHub link if different
+    github: "https://github.com/AK261102/Vastukaar_App", // Update with actual GitHub link if different
   },
   {
     title: "RAG System with Embeddings",
