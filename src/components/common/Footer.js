@@ -153,9 +153,8 @@ const Footer = () => {
   };
 
   useEffect(() => {
-    // Fetch GitHub repo stats (replace with your repo)
-    const username = personalInfo.github.split('/').pop();
-    fetch(`https://api.github.com/repos/${username}/portfolio`)
+    // Fetch GitHub repo stats from API
+    fetch(`https://api.github.com/repos/AK261102/silver-spork`)
       .then(response => response.json())
       .then(data => {
         if (data.stargazers_count) setGithubStars(data.stargazers_count);
@@ -185,7 +184,7 @@ const Footer = () => {
       
       <GitHubInfo>
         <GitHubButton
-          href={`${personalInfo.github}/portfolio`}
+          href="https://github.com/AK261102/silver-spork"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
@@ -194,9 +193,9 @@ const Footer = () => {
           <FiGithub />
           <span>View Source</span>
         </GitHubButton>
-        
+
         <GitHubButton
-          href={`${personalInfo.github}/portfolio/fork`}
+          href="https://github.com/AK261102/silver-spork/fork"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
@@ -206,9 +205,9 @@ const Footer = () => {
           <span>Fork</span>
           {githubForks > 0 && <span className="count">{githubForks}</span>}
         </GitHubButton>
-        
+
         <GitHubButton
-          href={`${personalInfo.github}/portfolio/stargazers`}
+          href="https://github.com/AK261102/silver-spork/stargazers"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}

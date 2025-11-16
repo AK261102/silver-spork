@@ -15,8 +15,8 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${props => props.theme.colors.darkNavy};
     color: ${props => props.theme.colors.slate};
     font-family: ${props => props.theme.fonts.sans};
-    font-size: 18px;
-    line-height: 1.3;
+    font-size: 20px;
+    line-height: 1.6;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -49,12 +49,12 @@ const GlobalStyles = createGlobalStyle`
 
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(50px, 8vw, 90px);
   }
 
   .medium-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
+    font-size: clamp(45px, 8vw, 70px);
   }
 
   .numbered-heading {
@@ -63,7 +63,7 @@ const GlobalStyles = createGlobalStyle`
     position: relative;
     margin: 10px 0 40px;
     width: 100%;
-    font-size: clamp(26px, 5vw, 32px);
+    font-size: clamp(32px, 5vw, 40px);
     white-space: nowrap;
 
     &:before {
@@ -73,7 +73,7 @@ const GlobalStyles = createGlobalStyle`
       margin-right: 10px;
       color: ${props => props.theme.colors.green};
       font-family: ${props => props.theme.fonts.mono};
-      font-size: clamp(16px, 3vw, 20px);
+      font-size: clamp(20px, 3vw, 24px);
       font-weight: 400;
     }
 
@@ -135,8 +135,8 @@ const GlobalStyles = createGlobalStyle`
       padding: 0;
       margin: 0;
       list-style: none;
-      font-size: 18px;
-      
+      font-size: 20px;
+
       li {
         position: relative;
         padding-left: 30px;
@@ -147,7 +147,7 @@ const GlobalStyles = createGlobalStyle`
           position: absolute;
           left: 0;
           color: ${props => props.theme.colors.green};
-          font-size: 18px;
+          font-size: 20px;
           line-height: 1;
         }
       }
@@ -173,26 +173,26 @@ const GlobalStyles = createGlobalStyle`
     border: 1px solid ${props => props.theme.colors.green};
     border-radius: 4px;
     padding: 1.25rem 1.75rem;
-    font-size: 14px;
+    font-size: 16px;
     font-family: ${props => props.theme.fonts.mono};
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
     transition: ${props => props.theme.transition};
-    
+
     &:hover,
     &:focus {
       background-color: ${props => props.theme.colors.greenTint};
       outline: none;
     }
-    
+
     &:after {
       display: none !important;
     }
   }
 
   .btn-big {
-    font-size: 16px;
+    font-size: 18px;
     padding: 1.25rem 1.75rem;
   }
 `;

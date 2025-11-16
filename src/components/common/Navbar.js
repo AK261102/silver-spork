@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
 import { navLinks, personalInfo } from '../../utils/constants';
+import PersonalLogo from './PersonalLogo';
 
 const Nav = styled.nav`
   display: flex;
@@ -75,7 +76,7 @@ const ListItem = styled(motion.li)`
   margin: 0 5px;
   position: relative;
   counter-increment: item 1;
-  font-size: 13px;
+  font-size: 15px;
   font-family: ${props => props.theme.fonts.mono};
 
   a {
@@ -86,7 +87,7 @@ const ListItem = styled(motion.li)`
       content: '0' counter(item) '.';
       margin-right: 5px;
       color: ${props => props.theme.colors.green};
-      font-size: 12px;
+      font-size: 14px;
       text-align: right;
     }
 
@@ -101,8 +102,8 @@ const ResumeButton = styled(motion.a)`
   background-color: transparent;
   border: 1px solid ${props => props.theme.colors.green};
   border-radius: 4px;
-  padding: 0.75rem 1rem;
-  font-size: 13px;
+  padding: 0.85rem 1.2rem;
+  font-size: 15px;
   font-family: ${props => props.theme.fonts.mono};
   line-height: 1;
   text-decoration: none;
@@ -241,32 +242,7 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
         >
           <a href="/" aria-label="home">
-            <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-              <g>
-                <path
-                  stroke="currentColor"
-                  strokeWidth="5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M 50, 5
-                     L 11, 27
-                     L 11, 72
-                     L 50, 95
-                     L 89, 73
-                     L 89, 28
-                     z"
-                />
-              </g>
-              <text
-                x="50"
-                y="67"
-                fill="currentColor"
-                fontSize="50"
-                textAnchor="middle"
-              >
-                Y
-              </text>
-            </svg>
+            <PersonalLogo size={42} color="currentColor" animated={false} variant="simple" />
           </a>
         </Logo>
 

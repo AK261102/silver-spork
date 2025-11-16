@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiFolder } from 'react-icons/fi';
+import { FiFolder, FiGithub, FiExternalLink } from 'react-icons/fi';
 import { featuredProjects, personalProjects } from '../../utils/constants';
 
 const ProjectsSection = styled.section`
@@ -147,6 +147,27 @@ const ProjectTop = styled.div`
   width: 100%;
 `;
 
+const ProjectLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+const ProjectLink = styled.a`
+  color: ${props => props.theme.colors.lightSlate};
+  transition: ${props => props.theme.transition};
+
+  &:hover {
+    color: ${props => props.theme.colors.green};
+    transform: translateY(-3px);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+`;
+
 const FolderIcon = styled(FiFolder)`
   color: ${props => props.theme.colors.green};
   width: 40px;
@@ -247,6 +268,28 @@ const Projects = () => {
             <ProjectInner className="project-inner">
               <ProjectTop>
                 <FolderIcon />
+                <ProjectLinks>
+                  {project.github && (
+                    <ProjectLink
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub Link"
+                    >
+                      <FiGithub />
+                    </ProjectLink>
+                  )}
+                  {project.external && (
+                    <ProjectLink
+                      href={project.external}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="External Link"
+                    >
+                      <FiExternalLink />
+                    </ProjectLink>
+                  )}
+                </ProjectLinks>
               </ProjectTop>
               <PersonalProjectTitle>{project.title}</PersonalProjectTitle>
               <PersonalProjectDescription>{project.description}</PersonalProjectDescription>

@@ -9,6 +9,9 @@ import styled from 'styled-components';
 // Import components
 import Loader from './components/common/Loader';
 import Navbar from './components/common/Navbar';
+import Social from './components/common/Social';
+import Email from './components/common/Email';
+import AnimatedBackground3D from './components/common/AnimatedBackground3D';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
@@ -59,7 +62,10 @@ function App() {
             <Loader key="loader" />
           ) : (
             <>
+              <AnimatedBackground3D />
               <Navbar />
+              <Social />
+              <Email />
               <Main id="content">
                 <Hero />
                 <About />

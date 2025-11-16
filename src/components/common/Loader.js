@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import PersonalLogo from './PersonalLogo';
 
 const StyledLoader = styled(motion.div)`
   display: flex;
@@ -17,18 +18,22 @@ const StyledLoader = styled(motion.div)`
   z-index: 99;
 `;
 
-const LogoWrapper = styled.div`
-  width: 100px;
-  height: 100px;
+const LogoWrapper = styled(motion.div)`
+  width: 200px;
+  height: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 `;
 
-const Logo = styled(motion.svg)`
-  width: 100%;
-  height: 100%;
-  fill: none;
+const LoadingText = styled(motion.div)`
+  color: ${props => props.theme.colors.green};
+  font-family: ${props => props.theme.fonts.mono};
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 `;
 
 const Loader = () => {
@@ -38,44 +43,23 @@ const Loader = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
     >
-      <LogoWrapper>
-        <Logo viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <motion.g
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: 0.2 }}
-          >
-            <motion.path
-              stroke="#64ffda"
-              strokeWidth="5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M 50, 5
-                 L 11, 27
-                 L 11, 72
-                 L 50, 95
-                 L 89, 73
-                 L 89, 28
-                 z"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 1, ease: 'easeInOut' }}
-            />
-          </motion.g>
-          <motion.text
-            x="50"
-            y="67"
-            fill="#64ffda"
-            fontSize="50"
-            textAnchor="middle"
-            fontFamily="SF Mono, Fira Code, monospace"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-          >
-            Y
-          </motion.text>
-        </Logo>
+      <LogoWrapper
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <PersonalLogo size={150} animated={true} variant="full" />
+        <LoadingText
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0, 1, 0] }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            delay: 1.5
+          }}
+        >
+          Loading...
+        </LoadingText>
       </LogoWrapper>
     </StyledLoader>
   );

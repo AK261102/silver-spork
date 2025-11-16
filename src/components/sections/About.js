@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { skills, personalInfo } from '../../utils/constants';
+import ProfileImage from "../../assets/images/Profile.png";
 
 const AboutSection = styled.section`
   max-width: 900px;
@@ -21,9 +22,10 @@ const SectionContent = styled.div`
 
 const TextContent = styled.div`
   p {
-    margin: 0 0 15px 0;
-    font-size: 17px;
-    line-height: 1.5;
+    margin: 0 0 20px 0;
+    font-size: 20px;
+    line-height: 1.7;
+    color: ${props => props.theme.colors.lightSlate};
 
     &:last-of-type {
       margin: 0;
@@ -42,29 +44,30 @@ const SkillsList = styled.ul`
 
   li {
     position: relative;
-    margin-bottom: 10px;
-    padding-left: 20px;
+    margin-bottom: 12px;
+    padding-left: 25px;
     font-family: ${props => props.theme.fonts.mono};
-    font-size: 13px;
+    font-size: 16px;
+    color: ${props => props.theme.colors.lightSlate};
 
     &:before {
       content: '▹';
       position: absolute;
       left: 0;
       color: ${props => props.theme.colors.green};
-      font-size: 14px;
-      line-height: 12px;
+      font-size: 18px;
+      line-height: 16px;
     }
   }
 `;
 
 const ImageWrapper = styled.div`
   position: relative;
-  max-width: 300px;
+  max-width: 400px;
 
   @media (max-width: 768px) {
     margin: 50px auto 0;
-    width: 70%;
+    width: 80%;
   }
 `;
 
@@ -72,73 +75,26 @@ const ImageContainer = styled.div`
   display: block;
   position: relative;
   width: 100%;
-  border-radius: 4px;
-  background-color: ${props => props.theme.colors.green};
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 
-  &:hover,
-  &:focus {
-    background: transparent;
-    outline: 0;
-
-    &:after {
-      top: 15px;
-      left: 15px;
-    }
-
-    .img {
-      filter: none;
-      mix-blend-mode: normal;
-    }
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px -15px rgba(2, 12, 27, 0.9);
   }
 
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    transition: ${props => props.theme.transition};
-    top: 0;
-    left: 0;
-    background-color: ${props => props.theme.colors.darkNavy};
-    mix-blend-mode: screen;
-  }
-
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    transition: ${props => props.theme.transition};
-    border: 2px solid ${props => props.theme.colors.green};
-    top: 20px;
-    left: 20px;
-    z-index: -1;
-  }
+  transition: all 0.3s ease;
 `;
 
-const StyledImage = styled.div`
+const StyledImage = styled.img`
   position: relative;
-  border-radius: 4px;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1);
-  transition: ${props => props.theme.transition};
+  border-radius: 8px;
   width: 100%;
-  height: 300px;
-  background-color: ${props => props.theme.colors.green};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  /* Placeholder - replace with actual image */
-  &:before {
-    content: 'Your Photo';
-    color: ${props => props.theme.colors.lightestSlate};
-    font-family: ${props => props.theme.fonts.mono};
-  }
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 `;
 
 const About = () => {
@@ -150,8 +106,8 @@ const About = () => {
   // Combine all skills into a single list for display
   const allSkills = [
     ...skills.languages.slice(0, 3),
-    ...skills.frameworks.slice(0, 3),
-    ...skills.databases.slice(0, 2)
+    ...skills.frameworks.slice(0, 4),
+    ...skills.databases.slice(0, 1)
   ];
 
   return (
@@ -212,7 +168,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <ImageContainer>
-                <StyledImage className="img" />
+                <StyledImage className="img" src={ProfileImage} alt="Profile" />
               </ImageContainer>
             </motion.div>
           </ImageWrapper>

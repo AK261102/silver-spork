@@ -1,0 +1,51 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#0a192f"/>
+  <g fill="none">
+    <!-- Hexagon background -->
+    <path
+      stroke="#64ffda"
+      stroke-width="1.5"
+      d="M 16, 3
+         L 6, 8.5
+         L 6, 19.5
+         L 16, 25
+         L 26, 19.5
+         L 26, 8.5
+         z"
+    />
+    <!-- AK monogram -->
+    <g fill="#64ffda" font-family="SF Mono, Fira Code, monospace" font-weight="bold">
+      <!-- A -->
+      <path
+        d="M 11 18 L 12.5 14 L 13.5 11 L 14.5 14 L 16 18"
+        stroke="#64ffda"
+        stroke-width="1.2"
+        fill="none"
+        stroke-linecap="round"
+      />
+      <path
+        d="M 11.8 16 L 15.2 16"
+        stroke="#64ffda"
+        stroke-width="1"
+        fill="none"
+        stroke-linecap="round"
+      />
+      <!-- K -->
+      <path
+        d="M 17.5 11 L 17.5 18"
+        stroke="#64ffda"
+        stroke-width="1.2"
+        fill="none"
+        stroke-linecap="round"
+      />
+      <path
+        d="M 21 12.5 L 17.5 14.5 L 21 18"
+        stroke="#64ffda"
+        stroke-width="1.2"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </g>
+  </g>
+</svg>

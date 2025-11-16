@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Ashish Kumar",
   title: "Software Engineer",
-  email: "ak503005@example.com",
+  email: "ak503005@gmail.com",
   phone: "+91-6307465659",
   location: "Chennai, Tamil Nadu, India",
   company: "MedicalMine India Private Limited (Zoho Subsidiary)",
@@ -10,7 +10,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/ashish-kumar-137363224/",
   twitter: "https://x.com/kumar_ashi35850?s=21",
   instagram: "https://www.instagram.com/ak261.1/",
-  resume: "/resume.pdf"
+  resume: "/resume/resume.pdf"
 };
 
 export const navLinks = [
@@ -22,8 +22,8 @@ export const navLinks = [
 
 export const skills = {
   languages: ["Java", "JavaScript", "Python", "C++", "SQL", "HTML/CSS"],
-  frameworks: ["Spring Boot", "React", "Node.js", "Express", "Django"],
-  databases: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Elasticsearch"],
+  frameworks: ["Spring Boot", "React", "Node.js", "MERN", "Django"],
+  databases: [ "MySQL", "MongoDB", "Redis", "Elasticsearch"],
   tools: ["Docker", "Kubernetes", "Apache Kafka", "Git", "Jenkins", "Maven"],
   cloud: ["AWS", "Azure", "GCP"],
   concepts: ["Microservices", "REST APIs", "System Design", "Data Structures", "Algorithms"]
@@ -92,36 +92,65 @@ export const featuredProjects = [
 
 export const personalProjects = [
   {
+    title: "CoinDCX Trading App",
+    description: "Full-stack cryptocurrency trading dashboard with real-time market data, portfolio tracking, order placement (buy/sell), and secure authentication. Backend integrates with CoinDCX API.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "CoinDCX API"],
+    github: "https://github.com/AK261102/coin-dcx-trading-app",
+    date: "Apr 2025"
+  },
+  {
+    title: "Interview Platform",
+    description: "User-friendly web application designed to share and learn from interview experiences, enabling individuals to prepare effectively by accessing insights from a supportive community.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/AK261102/Interview-Platform",
+  },
+  {
+    title: "Movie Recommendation System",
+    description: "Robust recommendation engine using user-based collaborative filtering with Cosine Similarity, Pearson Correlation, and Euclidean Distance algorithms to predict personalized movie suggestions.",
+    tech: ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
+    github: "https://github.com/AK261102/UBCF_Recommendation_System",
+  },
+  {
+    title: "PayTM Clone",
+    description: "MERN stack payment application replicating PayTM functionality with user transactions, account balance management, and secure authentication.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT"],
+    github: "https://github.com/AK261102/PayTM-MERN",
+  },
+  {
+    title: "Pinvent - Inventory Management System",
+    description: "Comprehensive inventory management system for SMBs with CRUD operations, stock tracking, report generation, user profiles, pagination, and Redux state management.",
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Redux Toolkit", "SCSS", "Multer"],
+    github: "https://github.com/AK261102/pinvent", // Update with actual GitHub link if different
+  },
+  {
     title: "RAG System with Embeddings",
     description: "Retrieval-Augmented Generation system with embedding clustering for improved search accuracy. Implements vector databases and semantic search.",
     tech: ["Python", "LangChain", "Pinecone", "FastAPI"],
+    github: "https://github.com/AK261102/RAG-LLM-Multi-Source-Q-A-System-with-Evaluation",
   },
   {
     title: "Competitive Programming Solutions",
     description: "Collection of optimized solutions for algorithmic challenges focusing on number theory, game theory, and advanced data structures.",
     tech: ["C++", "Algorithms", "Data Structures"],
+    github: "https://leetcode.com/u/ashishkr1356/",
   },
 ];
 
 export const socialMedia = [
   {
     name: 'GitHub',
-    url: '',
-  },
-  {
-    name: 'Instagram',
-    url: 'https://instagram.com/yourusername',
-  },
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/yourusername',
+    url: 'https://github.com/AK261102',
   },
   {
     name: 'Linkedin',
-    url: 'https://linkedin.com/in/yourusername',
+    url: 'https://www.linkedin.com/in/ashish-kumar-137363224/',
   },
   {
-    name: 'Codepen',
-    url: 'https://codepen.io/yourusername',
+    name: 'Twitter',
+    url: 'https://x.com/kumar_ashi35850?s=21',
+  },
+  {
+    name: 'Instagram',
+    url: 'https://www.instagram.com/ak261.1/',
   },
 ];

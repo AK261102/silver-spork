@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { personalInfo } from '../../utils/constants';
 
 const ContactSection = styled.section`
   max-width: 600px;
@@ -20,12 +21,6 @@ const Overline = styled.p`
   font-family: ${props => props.theme.fonts.mono};
   font-size: 16px;
   font-weight: 400;
-
-  &:before {
-    content: '03.';
-    margin-right: 5px;
-    font-size: 14px;
-  }
 `;
 
 const Title = styled.h2`
@@ -85,11 +80,11 @@ const Contact = () => {
         <Overline>What's Next?</Overline>
         <Title>Get In Touch</Title>
         <Description>
-          Although I'm currently looking for any new opportunities, my inbox is always open. 
+          I'm currently looking for any new opportunities, my inbox is always open. 
           Whether you have a question or just want to say hi, I'll try my best to get back to you!
         </Description>
         <EmailButton
-          href="mailto:your.email@example.com"
+          href={`mailto:${personalInfo.email}`}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
